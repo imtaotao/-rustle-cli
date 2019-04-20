@@ -1,0 +1,18 @@
+{
+  "name": "rustle-cli",
+  "version": "1.0.0",
+  "description": "cli test project",
+  "main": "src/cli.js",
+  "scripts": {
+    "test": "node src/cli.js create"
+  },
+  "keywords": [
+    "cli"
+  ],
+  "author": "imtaotao",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^2.20.0",
+    "inquirer": "^6.3.1"
+  }
+}
