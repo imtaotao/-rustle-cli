@@ -1,8 +1,11 @@
 const fs = require('fs')
 const path = require('path')
 const _ = require('./utils')
+const init = require('./start')
 const program = require('commander')
 const inquirer = require('inquirer')
+
+const dirPath = __filename
 
 // 定义命令
 program
@@ -16,9 +19,12 @@ program
         message: 'fill you project name:',
       }])
       .then(answers => {
-        console.log(answers);
+        if (answers.name) {
+          return init(dirPath, answers.name)
+        }
+        _.warn('the project name is not accord demand [' + (answers.name || 'unKnow') + ']', true)
       })
-      .catch(error => console.error(error))
+      .catch(error => _.warn(error))
     }
   })
 
