@@ -12,6 +12,7 @@
   "author": "imtaotao",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.18.0",
     "commander": "^2.20.0",
     "inquirer": "^6.3.1"
   },
