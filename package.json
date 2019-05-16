@@ -14,5 +14,8 @@
   "dependencies": {
     "commander": "^2.20.0",
     "inquirer": "^6.3.1"
+  },
+  "devDependencies": {
+    "download-git-repo": "^1.1.0"
   }
 }
