@@ -1,22 +1,42 @@
 {
-  "name": "rustle-cli",
-  "version": "1.0.0",
-  "description": "cli test project",
-  "main": "src/cli.js",
+  "name": "nova-cli",
+  "version": "0.0.1",
+  "description": "cli for your own use.",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "node src/cli.js create"
+    "dev": "tsc --watch",
+    "build": "rimraf dist && tsc",
+    "release": "pnpm run build && npm publish",
+    "format": "prettier --write --parser typescript \"(lib|scripts|bin|dist)/**/*.(js|mjs|ts?(x))\""
   },
+  "bin": {
+    "n": "./bin/index.js",
+    "nova": "./bin/index.js"
+  },
+  "files": [
+    "dist/",
+    "bin/"
+  ],
   "keywords": [
     "cli"
   ],
   "author": "imtaotao",
-  "license": "ISC",
-  "dependencies": {
-    "axios": "^0.18.0",
-    "commander": "^2.20.0",
-    "inquirer": "^6.3.1"
-  },
+  "license": "MIT",
   "devDependencies": {
-    "download-git-repo": "^1.1.0"
+    "@types/node": "^18.7.2",
+    "@types/fs-extra": "^9.0.13",
+    "@types/ejs": "^3.1.1",
+    "@types/inquirer": "^9.0.3",
+    "typescript": "^5.3.2",
+    "prettier": "^3.1.0"
+  },
+  "dependencies": {
+    "ora": "^6.3.1",
+    "ejs": "^3.1.8",
+    "rimraf": "^5.0.5",
+    "cac": "^6.7.14",
+    "picocolors": "^1.0.0",
+    "inquirer": "^8.2.6 ",
+    "fs-extra": "^10.0.0"
   }
 }
