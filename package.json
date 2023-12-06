@@ -1,12 +1,12 @@
 {
-  "name": "nova-cli",
+  "name": "supernova-cli",
   "version": "0.0.1",
   "description": "cli for your own use.",
   "main": "dist/index.js",
   "scripts": {
     "dev": "tsc --watch",
     "build": "rimraf dist && tsc",
-    "release": "pnpm run build && npm publish",
+    "release": "pnpm run build && pnpm run format && npm publish",
     "format": "prettier --write --parser typescript \"(lib|scripts|bin|dist)/**/*.(js|mjs|ts?(x))\""
   },
   "bin": {
@@ -16,9 +16,6 @@
   "files": [
     "dist/",
     "bin/"
-  ],
-  "keywords": [
-    "cli"
   ],
   "author": "imtaotao",
   "license": "MIT",
