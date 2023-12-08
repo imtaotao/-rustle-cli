@@ -7,7 +7,7 @@
     "dev": "tsc --watch",
     "build": "rimraf dist && tsc",
     "release": "pnpm run build && pnpm run format && npm publish",
-    "format": "prettier --write --parser typescript \"(lib|scripts|bin|dist)/**/*.(js|mjs|ts?(x))\""
+    "format": "prettier --write --parser typescript \"(lib|scripts|bin|dist|templates)/**/*.(js|mjs|ts?(x))\""
   },
   "bin": {
     "n": "./bin/index.js",
