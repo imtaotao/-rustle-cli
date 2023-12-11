@@ -5,6 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "dev": "tsc --watch",
+    "nova": "node bin/index.js",
     "build": "rimraf dist && tsc",
     "release": "pnpm run build && pnpm run format && npm publish",
     "format": "prettier --write --parser typescript \"(lib|scripts|bin|dist|templates)/**/*.(js|mjs|ts?(x))\""
